@@ -1,4 +1,5 @@
 # VentasProductosClientes
+#Este trabajo involucra la implementación del frontend de un sistema informático utilizando tecnología Angular.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.3.
 
