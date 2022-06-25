@@ -9,7 +9,7 @@ import { ClienteComponent } from './cliente/cliente.component';
   declarations: [
     AppComponent,
     ClientesComponent,
-    ClienteComponent
+    ClienteComponent,
   ],
   imports: [
     BrowserModule
