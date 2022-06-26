@@ -1,11 +1,7 @@
-<!--<h1 style="text-align: center">Administración de Clientes</h1>-->
-
-<!--<app-cliente></app-cliente>-->
-
 <div class="container">
-  <section class="vh-100">
-    <div class="container h-100">
-      <div class="row d-flex justify-content-center align-items-center h-100">
+  <section class="" style="margin-bottom: 80px">
+    <div class="container">
+      <div class="row d-flex justify-content-center align-items-center" style="margin-top: 50px;">
         <div class="col-xl-9">
 
           <h1 class="text-black mb-4" style="display: flex; justify-content: center;">Agregar nuevo Cliente</h1>
@@ -21,7 +17,7 @@
                 </div>
                 <div class="col-md-9 ">
 
-                  <input type="text" class="form-control form-control-lg"/>
+                  <input type="text" class="form-control form-control-lg" #nombreyapellido/>
 
                 </div>
               </div>
@@ -34,7 +30,7 @@
                 </div>
                 <div class="col-md-9 ">
 
-                  <input type="text" class="form-control form-control-lg"/>
+                  <input type="text" class="form-control form-control-lg" #ruc/>
 
                 </div>
               </div>
@@ -49,7 +45,7 @@
                 </div>
                 <div class="col-md-9 ">
 
-                  <input type="email" class="form-control form-control-lg" placeholder="example@example.com"/>
+                  <input type="email" class="form-control form-control-lg" placeholder="example@example.com" #email/>
 
                 </div>
               </div>
@@ -57,7 +53,7 @@
 <!--              <hr class="mx-n3">-->
 
               <div class="px-5 py-4" style="display: flex; justify-content: center;">
-                <button type="submit" class="btn btn-primary btn-lg">Agregar</button>
+                <button type="submit" value="registrar" (click)="addCliente(nombreyapellido, ruc, email)"  class="btn btn-primary btn-lg">Agregar</button>
               </div>
 
             </div>
@@ -68,3 +64,11 @@
     </div>
   </section>
 </div>
+
+
+<h1 style="text-align: center">Lista de Clientes</h1>
+
+<!--<app-cliente *ngFor="let cliente of clientes; let i=index" [list_cliente]="empleado" [indice]="i"></app-cliente>-->
+<app-cliente></app-cliente>
+
+<!--<p *ngIf="registrado"></p>-->

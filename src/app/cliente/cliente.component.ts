@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ServicioClientesService} from "../servicio-clientes.service";
+import {Cliente} from "../models/Clientes";
 
 @Component({
   selector: 'app-cliente',
@@ -6,20 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cliente.component.css']
 })
 export class ClienteComponent implements OnInit {
+  list: Cliente[];
 
-  // nombre="Romina";
-  apellido="Rotela";
-  private ruc=4598900-1;
-  email="romy@rotela.com";
-  nombre: any;
-
-  getRuc(){
-    return this.ruc;
-  }
-
-  constructor() { }
+  constructor(
+    public clienteService: ServicioClientesService
+  ) { }
 
   ngOnInit(): void {
+    this.list = this.clienteService.getClientes();
   }
+
 
 }

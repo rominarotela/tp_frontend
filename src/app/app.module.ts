@@ -9,6 +9,9 @@ import { VentasProductosComponent } from './ventas-productos/ventas-productos.co
 import { VentasResumidoComponent } from './ventas-resumido/ventas-resumido.component';
 import { VentasDetalladoComponent } from './ventas-detallado/ventas-detallado.component';
 import {RouterModule, Routes} from "@angular/router";
+import {FormsModule} from "@angular/forms";
+import {ServicioClientesService} from "./servicio-clientes.service";
+import { CardClienteComponent } from './card-cliente/card-cliente.component';
 
 const appRoutes: Routes=[
   {path: '', component: ClientesComponent},
@@ -27,12 +30,14 @@ const appRoutes: Routes=[
     VentasProductosComponent,
     VentasResumidoComponent,
     VentasDetalladoComponent,
+    CardClienteComponent,
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [ServicioClientesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
