@@ -15,6 +15,7 @@ import { CardClienteComponent } from './card-cliente/card-cliente.component';
 import { EditClienteComponent } from './edit-cliente/edit-cliente.component';
 import { ProductoComponent } from './producto/producto.component';
 import { CardProductoComponent } from './card-producto/card-producto.component';
+import { CardVentaProductoComponent } from './card-venta-producto/card-venta-producto.component';
 
 const appRoutes: Routes=[
   {path: '', component: ClientesComponent},
@@ -37,6 +38,7 @@ const appRoutes: Routes=[
     EditClienteComponent,
     ProductoComponent,
     CardProductoComponent,
+    CardVentaProductoComponent,
   ],
   imports: [
     BrowserModule,

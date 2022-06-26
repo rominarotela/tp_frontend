@@ -1,0 +1,39 @@
+<div class="card">
+  <div class="row card-body">
+    <div class="col-4">
+      {{item.nombreyapellido}}
+    </div>
+    <div class="col-4">
+      {{item.ruc}}
+    </div>
+    <div class="col-4">
+      <button class="btn btn-primary" style="margin: 5px" (click)="salesShow()">Añadir venta</button>
+      <button class="btn btn-danger" style="margin: 5px" (click)="deleteClientes(item)">Borrar</button>
+    </div>
+  </div>
+</div>
+<div class="card" *ngIf="sales == true">
+  <div class="row card-body">
+    <div class="col-3">
+      <input type="text" class="form-control form-control-lg" #fecha placeholder="fecha"/>
+    </div>
+    <div class="col-3">
+      <input type="text" class="form-control form-control-lg" #nrofactura placeholder="nrofactura"/>
+    </div>
+    <div class="col-3">
+      <input type="text" class="form-control form-control-lg"  #nombreyapellido [(ngModel)]="item.nombreyapellido"/>
+    </div>
+    <div class="col-3">
+      <input type="text" class="form-control form-control-lg" #total placeholder="total"/>
+    </div>
+  </div>
+  <h1 style="text-align: center; margin-bottom: 1.5rem!important;">Lista de Productos</h1>
+  <app-producto></app-producto>
+  <div class="row">
+    <div class="col-12">
+      <button class="btn btn-success" style="margin: 5px" (click)="addVenta(fecha, nrofactura, nombreyapellido, total)">Venta</button>
+      <button class="btn btn-secondary" style="margin: 5px" (click)="hideData()">Cerrar</button>
+    </div>
+  </div>
+</div>
+

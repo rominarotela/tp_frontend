@@ -1,1 +1,15 @@
-<p>ventas-productos works!</p>
+<div class="container" style="text-align: center;">
+  <div class="row d-flex justify-content-center align-items-center card-body" style="border: 1px solid rgba(0,0,0,.125); border-radius: 0.25rem; background-color: whitesmoke; margin: 3px;">
+    <div class="col-4">
+      <span>Nombre y Apellido</span>
+    </div>
+    <div class="col-4">
+      <span>Ruc</span>
+    </div>
+    <div class="col-4">
+      <span></span>
+    </div>
+  </div>
+  <app-card-venta-producto *ngFor="let item of list" [item]="item"></app-card-venta-producto>
+<!--  <app-card-cliente *ngFor="let item of list" [item]="item"></app-card-cliente>-->
+</div>
