@@ -17,6 +17,8 @@ export class VentaRComponent implements OnInit {
     public ventaService: ServicioVentasService
   ) { }
 
+  filterPost = '';
+
   ngOnInit(): void {
     this.list = this.ventaService.getVentas();
   }
