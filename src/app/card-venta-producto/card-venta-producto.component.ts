@@ -47,8 +47,8 @@ export class CardVentaProductoComponent implements OnInit {
 
   }
 
-  hideData() {
-    return (this.element = false);
+  hideVenta() {
+    return (this.sales = false);
   }
 
   salesShow(){

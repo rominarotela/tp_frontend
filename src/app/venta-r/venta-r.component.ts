@@ -5,12 +5,13 @@ import {ServicioClientesService} from "../servicio-clientes.service";
 import {ServicioVentasService} from "../servicio-ventas.service";
 
 @Component({
-  selector: 'app-ventas-resumido',
-  templateUrl: './ventas-resumido.component.html',
-  styleUrls: ['./ventas-resumido.component.css']
+  selector: 'app-venta-r',
+  templateUrl: './venta-r.component.html',
+  styleUrls: ['./venta-r.component.css']
 })
-export class VentasResumidoComponent implements OnInit {
+export class VentaRComponent implements OnInit {
   list: Venta[];
+  item_venta: any;
 
   constructor(
     public ventaService: ServicioVentasService

@@ -16,6 +16,8 @@ import { EditClienteComponent } from './edit-cliente/edit-cliente.component';
 import { ProductoComponent } from './producto/producto.component';
 import { CardProductoComponent } from './card-producto/card-producto.component';
 import { CardVentaProductoComponent } from './card-venta-producto/card-venta-producto.component';
+import { VentaRComponent } from './venta-r/venta-r.component';
+import { VentaRListarComponent } from './venta-r-listar/venta-r-listar.component';
 
 const appRoutes: Routes=[
   {path: '', component: ClientesComponent},
@@ -39,6 +41,8 @@ const appRoutes: Routes=[
     ProductoComponent,
     CardProductoComponent,
     CardVentaProductoComponent,
+    VentaRComponent,
+    VentaRListarComponent,
   ],
   imports: [
     BrowserModule,

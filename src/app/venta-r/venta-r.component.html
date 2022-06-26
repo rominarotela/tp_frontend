@@ -1,0 +1,17 @@
+<div class="container" style="text-align: center;">
+  <div class="row d-flex justify-content-center align-items-center card-body" style="border: 1px solid rgba(0,0,0,.125); border-radius: 0.25rem; background-color: whitesmoke; margin: 3px;">
+    <div class="col-3">
+      <span>Fecha</span>
+    </div>
+    <div class="col-3">
+      <span>N° Factura</span>
+    </div>
+    <div class="col-3">
+      <span>Nombre</span>
+    </div>
+    <div class="col-3">
+      <span>Total</span>
+    </div>
+  </div>
+  <app-venta-r-listar *ngFor="let item_venta of list" [item_venta]="item_venta"></app-venta-r-listar>
+</div>
