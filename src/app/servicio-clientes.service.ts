@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Cliente} from './models/Clientes'
-import {ClienteComponent} from "./cliente/cliente.component";
+
 @Injectable({
   providedIn: 'root'
 })

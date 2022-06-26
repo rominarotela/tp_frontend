@@ -10,12 +10,12 @@
       {{item.email}}
     </div>
     <div class="col-3">
-      <button class="btn btn-primary" style="margin: 5px">Editar</button>
+      <button class="btn btn-primary" style="margin: 5px" (click)="showData()">Editar</button>
       <button class="btn btn-danger" style="margin: 5px" (click)="deleteClientes(item)">Borrar</button>
     </div>
   </div>
 </div>
-<div class="card">
+<div class="card" *ngIf="element == true">
   <div class="row card-body">
     <div class="col-3">
       <input type="text" class="form-control form-control-lg" [(ngModel)]="item.nombreyapellido"/>
@@ -28,6 +28,7 @@
     </div>
     <div class="col-3">
       <button class="btn btn-success" style="margin: 5px" (click)="putClientes(item)">Guardar</button>
+      <button class="btn btn-secondary" style="margin: 5px" (click)="hideData()">Cerrar</button>
     </div>
   </div>
 </div>

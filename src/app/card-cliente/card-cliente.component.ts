@@ -9,7 +9,7 @@ import {ClienteComponent} from "../cliente/cliente.component";
   styleUrls: ['./card-cliente.component.css']
 })
 export class CardClienteComponent implements OnInit {
-
+  element = false;
   @Input() item: Cliente;
 
   constructor(
@@ -27,5 +27,14 @@ export class CardClienteComponent implements OnInit {
 
   putClientes(item: Cliente) {
     this.clienteService.putClientes(item);
+    return false
   }
+
+  showData() {
+    return (this.element = true);
+  }
+  hideData() {
+    return (this.element = false);
+  }
+
 }
