@@ -50,4 +50,16 @@ export class ServicioClientesService {
       }
     }
   }
+
+  putClientes(list: Cliente){
+    for (let i = 0; i < this.list_clientes.length; i++){
+      if (list == this.list_clientes[i]) {
+        // this.list_clientes.p
+        localStorage.setItem('list_clientes', JSON.stringify(this.list_clientes));
+        console.log("encontro el registro", list, this.list_clientes[i]);
+      }
+    }
+  }
+
+
 }

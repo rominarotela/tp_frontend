@@ -25,4 +25,7 @@ export class CardClienteComponent implements OnInit {
     }
   }
 
+  putClientes(item: Cliente) {
+    this.clienteService.putClientes(item);
+  }
 }

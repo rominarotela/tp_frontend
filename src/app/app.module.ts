@@ -12,6 +12,7 @@ import {RouterModule, Routes} from "@angular/router";
 import {FormsModule} from "@angular/forms";
 import {ServicioClientesService} from "./servicio-clientes.service";
 import { CardClienteComponent } from './card-cliente/card-cliente.component';
+import { EditClienteComponent } from './edit-cliente/edit-cliente.component';
 
 const appRoutes: Routes=[
   {path: '', component: ClientesComponent},
@@ -31,6 +32,7 @@ const appRoutes: Routes=[
     VentasResumidoComponent,
     VentasDetalladoComponent,
     CardClienteComponent,
+    EditClienteComponent,
   ],
   imports: [
     BrowserModule,
