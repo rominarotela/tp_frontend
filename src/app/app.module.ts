@@ -13,6 +13,8 @@ import {FormsModule} from "@angular/forms";
 import {ServicioClientesService} from "./servicio-clientes.service";
 import { CardClienteComponent } from './card-cliente/card-cliente.component';
 import { EditClienteComponent } from './edit-cliente/edit-cliente.component';
+import { ProductoComponent } from './producto/producto.component';
+import { CardProductoComponent } from './card-producto/card-producto.component';
 
 const appRoutes: Routes=[
   {path: '', component: ClientesComponent},
@@ -33,6 +35,8 @@ const appRoutes: Routes=[
     VentasDetalladoComponent,
     CardClienteComponent,
     EditClienteComponent,
+    ProductoComponent,
+    CardProductoComponent,
   ],
   imports: [
     BrowserModule,

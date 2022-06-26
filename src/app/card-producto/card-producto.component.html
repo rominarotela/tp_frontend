@@ -1,0 +1,40 @@
+<div class="card">
+  <div class="row card-body">
+    <div class="col-2">
+      {{item.codigo}}
+    </div>
+    <div class="col-3">
+      {{item.nombre}}
+    </div>
+    <div class="col-2">
+      {{item.precioventa}}
+    </div>
+    <div class="col-2">
+      {{item.existencia}}
+    </div>
+    <div class="col-3">
+      <button class="btn btn-primary" style="margin: 5px" (click)="showData()">Editar</button>
+      <button class="btn btn-danger" style="margin: 5px" (click)="deleteProductos(item)">Borrar</button>
+    </div>
+  </div>
+</div>
+<div class="card" *ngIf="element == true">
+  <div class="row card-body">
+    <div class="col-2">
+      <input type="text" class="form-control form-control-lg" [(ngModel)]="item.codigo"/>
+    </div>
+    <div class="col-3">
+      <input type="text" class="form-control form-control-lg" [(ngModel)]="item.nombre"/>
+    </div>
+    <div class="col-2">
+      <input type="text" class="form-control form-control-lg" [(ngModel)]="item.precioventa"/>
+    </div>
+    <div class="col-2">
+      <input type="text" class="form-control form-control-lg" [(ngModel)]="item.existencia"/>
+    </div>
+    <div class="col-3">
+      <button class="btn btn-success" style="margin: 5px" (click)="putProductos(item)">Guardar</button>
+      <button class="btn btn-secondary" style="margin: 5px" (click)="hideData()">Cerrar</button>
+    </div>
+  </div>
+</div>

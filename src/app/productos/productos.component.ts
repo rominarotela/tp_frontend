@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ServicioProductosService} from "../servicio-productos.service";
 
 @Component({
   selector: 'app-productos',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductosComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public productoService:ServicioProductosService
+  ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+
+  }
+
+
+  addProducto(codigo:HTMLInputElement, nombre:HTMLInputElement, precioventa:HTMLInputElement, existencia:HTMLInputElement) {
+    console.log("agregando", codigo.value, nombre.value, precioventa.value, existencia.value);
+    this.productoService.addProductos({
+      codigo:codigo.value,
+      nombre:nombre.value,
+      precioventa:precioventa.value,
+      existencia:existencia.value
+    });
   }
 
 }
