@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {Cliente} from "../models/Clientes";
+import {ServicioClientesService} from "../servicio-clientes.service";
+import {ClienteComponent} from "../cliente/cliente.component";
 
 @Component({
   selector: 'app-card-cliente',
@@ -10,9 +12,16 @@ export class CardClienteComponent implements OnInit {
 
   @Input() item: Cliente;
 
-  constructor() { }
+  constructor(
+    public clienteService: ServicioClientesService
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  deleteClientes(item: Cliente){
+    this.clienteService.deleteClientes(item);
+    console.log("eliminando")
   }
 
 }

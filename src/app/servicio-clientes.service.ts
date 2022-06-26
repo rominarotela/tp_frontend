@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Cliente} from './models/Clientes'
+import {ClienteComponent} from "./cliente/cliente.component";
 @Injectable({
   providedIn: 'root'
 })
@@ -20,5 +21,15 @@ export class ServicioClientesService {
 
   addClientes(list: Cliente){
     this.list_clientes.push(list);
+  }
+
+  deleteClientes(list: Cliente){
+    console.log("ya esta por eliminar", list)
+    for (let i = 0; i < this.list_clientes.length; i++){
+      if (list == this.list_clientes[i]) {
+        console.log("entro al if")
+        this.list_clientes.splice(i, 1);
+      }
+    }
   }
 }
