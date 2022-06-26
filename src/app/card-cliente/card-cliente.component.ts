@@ -20,8 +20,9 @@ export class CardClienteComponent implements OnInit {
   }
 
   deleteClientes(item: Cliente){
-    this.clienteService.deleteClientes(item);
-    console.log("eliminando")
+    if (confirm('¿Estas seguro de eliminar el registro?')){
+      this.clienteService.deleteClientes(item);
+    }
   }
 
 }
