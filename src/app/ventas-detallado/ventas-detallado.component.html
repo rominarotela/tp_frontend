@@ -1,1 +1,28 @@
-<p>ventas-detallado works!</p>
+<h1 style="text-align: center; margin-top: 50px; margin-bottom: 1.5rem!important;">Lista de ventas - detallado</h1>
+<div class="container" style="text-align: center;">
+  <br>
+  <br>
+  <div class="row" style="display: flex; justify-content: center">
+    <div class="col-9">
+      <div class="form-outline mb-4">
+<!--        <input type="search" class="form-control" id="datatable-search-input" placeholder="buscador" [(ngModel)]="filterPost" name="filterPost">-->
+        <input type="search" class="form-control" id="datatable-search-input" placeholder="buscador" name="filterPost">
+      </div>
+    </div>
+  </div>
+  <div class="row d-flex justify-content-center align-items-center card-body" style="border: 1px solid rgba(0,0,0,.125); border-radius: 0.25rem; background-color: whitesmoke; margin: 3px;">
+    <div class="col-3">
+      <span>Fecha</span>
+    </div>
+    <div class="col-3">
+      <span>N° Factura</span>
+    </div>
+    <div class="col-3">
+      <span>Nombre</span>
+    </div>
+    <div class="col-3">
+      <span>Total</span>
+    </div>
+  </div>
+<!--  <app-venta-r-listar *ngFor="let item_venta of list | filter:filterPost" [item_venta]="item_venta"></app-venta-r-listar>-->
+</div>

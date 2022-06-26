@@ -22,8 +22,8 @@ export class FilterComponent implements PipeTransform {
     for (const post of value) {
       if (post.cliente.toLowerCase().indexOf(arg.toLowerCase()) > -1){
         resultPosts.push(post)
-      };
-    };
+      }
+    }
     return resultPosts;
   }
 
