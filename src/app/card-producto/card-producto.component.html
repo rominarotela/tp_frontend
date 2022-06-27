@@ -18,7 +18,7 @@
     </div>
   </div>
 </div>
-<div class="card" *ngIf="element == true">
+<div class="card" name="element" *ngIf="element == true" >
   <div class="row card-body">
     <div class="col-2">
       <input type="text" class="form-control form-control-lg" [(ngModel)]="item.codigo"/>
@@ -33,7 +33,8 @@
       <input type="text" class="form-control form-control-lg" [(ngModel)]="item.existencia"/>
     </div>
     <div class="col-3">
-      <button class="btn btn-success" style="margin: 5px" (click)="putProductos(item)">Guardar</button>
+<!--      <button class="btn btn-success" style="margin: 5px" (click)="putProductos(item)">Guardar</button>-->
+      <app-button-venta [item]="item"></app-button-venta>
       <button class="btn btn-secondary" style="margin: 5px" (click)="hideData()">Cerrar</button>
     </div>
   </div>

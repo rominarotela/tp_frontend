@@ -48,6 +48,7 @@ export class ServicioProductosService {
   }
 
   putProductos(list: Producto){
+    console.log("guardando...")
     for (let i = 0; i < this.list_productos.length; i++){
       if (list == this.list_productos[i]) {
         localStorage.setItem('list_productos', JSON.stringify(this.list_productos));

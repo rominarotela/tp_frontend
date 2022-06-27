@@ -21,6 +21,9 @@ import { VentaRListarComponent } from './venta-r-listar/venta-r-listar.component
 import { Ng2SearchPipeModule } from "ng2-search-filter";
 import { FilterPipeModule } from 'ngx-filter-pipe';
 import { FilterComponent } from './filter/filter.component';
+import { ButtonVentaComponent } from './button-venta/button-venta.component';
+import { ProductoListarComponent } from './producto-listar/producto-listar.component';
+import { VentaProductoComponent } from './venta-producto/venta-producto.component';
 
 const appRoutes: Routes=[
   {path: '', component: ClientesComponent},
@@ -47,6 +50,9 @@ const appRoutes: Routes=[
     VentaRComponent,
     VentaRListarComponent,
     FilterComponent,
+    ButtonVentaComponent,
+    ProductoListarComponent,
+    VentaProductoComponent,
   ],
   imports: [
     BrowserModule,
