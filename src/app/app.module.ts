@@ -24,6 +24,7 @@ import { FilterComponent } from './filter/filter.component';
 import { ButtonVentaComponent } from './button-venta/button-venta.component';
 import { ProductoListarComponent } from './producto-listar/producto-listar.component';
 import { VentaProductoComponent } from './venta-producto/venta-producto.component';
+import { DetalleComponent } from './detalle/detalle.component';
 
 const appRoutes: Routes=[
   {path: '', component: ClientesComponent},
@@ -53,6 +54,7 @@ const appRoutes: Routes=[
     ButtonVentaComponent,
     ProductoListarComponent,
     VentaProductoComponent,
+    DetalleComponent,
   ],
   imports: [
     BrowserModule,
